@@ -1,0 +1,188 @@
+/* DO NOT CHANGE */
+@import "tailwindcss";
+@import "tw-animate-css";
+@custom-variant dark (&:is(.dark *));
+
+/* DO NOT CHANGE */
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/* CHANGE VALUES FOR THEME */
+:root {
+  --radius: 0rem;
+  --background: #f2f0e9;
+  --foreground: #0a0a0a;
+  --card: #ffffff;
+  --card-foreground: #0a0a0a;
+  --popover: #ffffff;
+  --popover-foreground: #0a0a0a;
+  --primary: #2f6bff;
+  --primary-foreground: #ffffff;
+  --secondary: #ffd7be;
+  --secondary-foreground: #0a0a0a;
+  --muted: #e8e5db;
+  --muted-foreground: #5c5850;
+  --accent: #d3f462;
+  --accent-foreground: #0a0a0a;
+  --destructive: #ff4d2e;
+  --border: #0a0a0a;
+  --input: #0a0a0a;
+  --ring: #2f6bff;
+  --chart-1: #2f6bff;
+  --chart-2: #ff4d2e;
+  --chart-3: #00a878;
+  --chart-4: #ffcf00;
+  --chart-5: #7a4dff;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #0a0a0a;
+  --sidebar-primary: #2f6bff;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #d3f462;
+  --sidebar-foreground: #0a0a0a;
+  --sidebar-border: #0a0a0a;
+  --sidebar-ring: #2f6bff;
+
+  /* Fleet simulation palette */
+  --fleet-blue: #2f6bff;
+  --fleet-red: #ff4d2e;
+  --fleet-green: #00a878;
+  --fleet-yellow: #ffcf00;
+  --fleet-purple: #7a4dff;
+  --fleet-lime: #d3f462;
+  --fleet-paper: #f2f0e9;
+  --fleet-ink: #0a0a0a;
+  --fleet-floor: #ffffff;
+}
+
+.dark {
+  --background: #16150f;
+  --foreground: #f2f0e9;
+  --card: #1d1c14;
+  --card-foreground: #f2f0e9;
+  --popover: #1d1c14;
+  --popover-foreground: #f2f0e9;
+  --primary: #5b8cff;
+  --primary-foreground: #0a0a0a;
+  --secondary: #ffd7be;
+  --secondary-foreground: #0a0a0a;
+  --muted: #2a281d;
+  --muted-foreground: #a8a396;
+  --accent: #d3f462;
+  --accent-foreground: #0a0a0a;
+  --destructive: #ff4d2e;
+  --border: #f2f0e9;
+  --input: #f2f0e9;
+  --ring: #5b8cff;
+  --chart-1: #5b8cff;
+  --chart-2: #ff4d2e;
+  --chart-3: #00a878;
+  --chart-4: #ffcf00;
+  --chart-5: #7a4dff;
+  --sidebar: #1d1c14;
+  --sidebar-foreground: #f2f0e9;
+  --sidebar-primary: #5b8cff;
+  --sidebar-primary-foreground: #0a0a0a;
+  --sidebar-accent: #d3f462;
+  --sidebar-foreground: #f2f0e9;
+  --sidebar-border: #f2f0e9;
+  --sidebar-ring: #5b8cff;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  button:not([disabled]),
+  [role="button"]:not([disabled]) {
+    cursor: pointer;
+  }
+}
+
+/* ============ NEOBRUTALISM MINIMALISM UTILITIES ============ */
+@layer utilities {
+  .nb-border {
+    border-width: 2px;
+    border-color: var(--border);
+  }
+  .nb-border-4 {
+    border-width: 4px;
+    border-color: var(--border);
+  }
+  .nb-shadow {
+    box-shadow: 4px 4px 0 0 var(--border);
+  }
+  .nb-shadow-sm {
+    box-shadow: 2px 2px 0 0 var(--border);
+  }
+  .nb-shadow-lg {
+    box-shadow: 8px 8px 0 0 var(--border);
+  }
+  .nb-press {
+    transition: box-shadow 0.08s ease, transform 0.08s ease;
+  }
+  .nb-press:active {
+    box-shadow: 0 0 0 0 var(--border);
+    transform: translate(4px, 4px);
+  }
+  .nb-press-sm:active {
+    box-shadow: 0 0 0 0 var(--border);
+    transform: translate(2px, 2px);
+  }
+  .nb-stroke {
+    -webkit-text-stroke: 2px var(--border);
+  }
+  .nb-grid {
+    background-image:
+      linear-gradient(to right, rgba(10, 10, 10, 0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(10, 10, 10, 0.06) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+}
+
+@keyframes nb-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Fleet map canvas: blocky, pixelated rendering to match the theme */
+.warehouse-canvas {
+  image-rendering: pixelated;
+}
